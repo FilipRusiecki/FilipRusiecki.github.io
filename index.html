@@ -1,19 +1,69 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
+
 <head>
-<title>Test Form</title>
+    <meta charset="utf-8">
+    <title>lab 6 plz work</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML5 GameLoop Template">
+    <meta name="author" content="UI Programming">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
 </head>
+
 <body>
 
-<form action="https://www.google.com" method="GET" target="_blank">
-
-<input type="text" name="q" value="pwa">
-<input type="text" name="q" value="hiiii">
-<input type="password" name="password" value="1234">
-<button type="reset">Reset</button>
-<button type="submit">Submit</button>
-
-</form>
-
+    <canvas tabindex="1" id="game" width="800" height="500" style="border: black 1px solid;">
+        Oops! looks like your browser does not support canvas tag
+    </canvas>
+	 <table>
+        <tbody>
+            <tr>
+                <td>&nbsp;</td>
+                <td><button onclick="moveUp()" class="button yellow round" id="wButton">W</button></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><button onclick="moveLeft()" class="button blue round" id="aButton">A</button></td>
+                <td>&nbsp;</td>
+                <td><button onclick="moveDown()" class="button red round" id="dButton">D</button></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><button onclick="moveRight()" class="button green round" id="sButton">S</button></td>
+                <td>&nbsp;</td>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">
+          <div class="custom-select" style="width:200px;">
+            <select id="equipment" onchange="weaponSelection()">
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">
+          <label class="switch">
+            <input id="active" onclick="weaponSelection()" type="checkbox">
+            <span class="toggle"></span>
+			 <h1 id="HUD" onload="weaponSelection()"></h1>
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ 
 </body>
+
+    <!--JavaScript File-->
+    <script src="./js/script.js"></script>
+
 </html>
