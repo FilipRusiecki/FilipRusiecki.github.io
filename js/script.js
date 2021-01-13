@@ -8,10 +8,10 @@ var context = canvas.getContext("2d");
 var buttonD = document.getElementById("dButton")
 var npcsprite = new Image();
 var audio = new Audio('buttonClick.mp3');
-npcsprite.src = "./img/fade.png"; // Frames 1 to 6
+npcsprite.src = "./FilipRusiecki.github.io/img/fade.png"; // Frames 1 to 6
 var playerHealth = 110;
 var sprite = new Image();
-sprite.src = "./img/sprite.png"; // Frames 1 to 6
+sprite.src = "./FilipRusiecki.github.io/img/sprite.png"; // Frames 1 to 6
 
 function buttonOnClick() {
   // alert("Booooommmmmm!!!");
