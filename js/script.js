@@ -215,7 +215,7 @@ var x = 0,
 // Draw GameObjects to Console
 // Modify to Draw to Screen
 function draw() {
-	context.fillText(username,600,200);
+	
 }
 
 
@@ -272,6 +272,7 @@ var current; // current time
 
 function animate() {
 	context.clearRect(0, 0, canvas.width, canvas.height); 
+	context.fillText(username,600,200);
     current = new Date().getTime(); // update current
     if (current - initial >= 300) { // check is greater that 500 ms
         currentFrame = (currentFrame + 1) % frames; // update frame
