@@ -13,6 +13,25 @@ var playerHealth = 110;
 var sprite = new Image();
 sprite.src = "/img/sprite.png"; // Frames 1 to 6
 
+
+context.font = "30px Arial";
+
+var url = document.location.href;
+var gamertag;
+function splitFunction() {
+	var result = url.split("=");
+	
+	gamertag = result[1];
+}
+splitFunction();
+var string1 = "Welcome";
+
+var string2 = "gamertag";
+
+var username = string1.concat(string2);
+
+
+
 function buttonOnClick() {
   // alert("Booooommmmmm!!!");
   console.log("Button Pressed");
@@ -196,14 +215,7 @@ var x = 0,
 // Draw GameObjects to Console
 // Modify to Draw to Screen
 function draw() {
-    // Clear Canvas
-    // Iterate through all GameObjects
-    // Draw each GameObject
-    // console.log("Draw");
-   
-
-	
-
+	context.fillText(username,600,200);
 }
 
 
