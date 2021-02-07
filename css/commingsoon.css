@@ -1,0 +1,26 @@
+body {
+	background-color: #000001;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.gif1{
+	
+	position:absolute;
+	left:23%;
+	top:0px;
+	height:1100px;
+}
+
+@font-face {
+  font-family: cosmicblaster;
+  src: url(./fonts/cosmicblaster.ttf);
+}
+
+
+.header{
+	position:absolute;
+	color:white;
+	font-family: cosmicblaster;
+	left:500px;
+}
