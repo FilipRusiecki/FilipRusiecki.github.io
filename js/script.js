@@ -200,6 +200,11 @@ function input(event) {
     }
     // console.log("Gamer Input :" + gamerInput.action);
 }
+document.getElementById("wButton").onmouseup = function() {buttonUp()};
+document.getElementById("aButton").onmouseup = function() {buttonUp()};
+document.getElementById("dButton").onmouseup = function() {buttonUp()};
+document.getElementById("sButton").onmouseop = function() {buttonUp()}
+
 
 
 function moveRight()
@@ -211,17 +216,20 @@ function moveRight()
 function moveLeft()
 {	
 	gamerInput = new GamerInput ("Left");
+	score = score +1;
 	audio.play();
 }
 function moveUp()
 {
 	gamerInput = new GamerInput ("Up");
+	score = score +1;
 	audio.play();
 }
 
 function moveDown()
 {
 	gamerInput = new GamerInput ("Down");
+	score = score +1;
 	audio.play();
 }
 function ButtonUp()
