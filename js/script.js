@@ -74,7 +74,6 @@ function onPage() {
 // Update the player score
 function updateScore() {
   var current_score = localStorage.getItem('score');
-	console.log("big pp");
   if (isNaN(current_score)) {
     localStorage.setItem('score', 0);
     document.getElementById("SCORE").innerHTML = " [ " + current_score + " ] ";
