@@ -40,7 +40,7 @@ function onPage() {
     xhr.send();
   };
 
-  readJSONFromURL('./data/level.json', function (err, data) {
+  readJSONFromURL('https://filiprusiecki.github.io./data/level.json', function (err, data) {
     if (err != null) {
       console.error(err);
     } else {
@@ -62,7 +62,7 @@ function onPage() {
       document.getElementById("NPC").innerHTML = data[0];
     }
   };
-  xmlhttp.open("GET", "./data/level.json", true);
+  xmlhttp.open("GET", "https://filiprusiecki.github.io./data/level.json", true);
   xmlhttp.send();
 
 
@@ -89,15 +89,16 @@ function updateScore() {
 
 
 
+
 var canvas = document.getElementById("game");
 var context = canvas.getContext("2d");
 var buttonD = document.getElementById("dButton")
 var npcsprite = new Image();
 var audio = new Audio('buttonClick.mp3');
-npcsprite.src = "/img/faden.png"; // Frames 1 to 6
+npcsprite.src = "https://filiprusiecki.github.io./img/faden.png"; // Frames 1 to 6
 var playerHealth = 110;
 var sprite = new Image();
-sprite.src = "/img/sprite.png"; // Frames 1 to 6
+sprite.src = "https://filiprusiecki.github.io./img/sprite.png"; // Frames 1 to 6
 
 
 context.font = "30px Arial";
@@ -110,18 +111,12 @@ function splitFunction() {
 	gamertag = result[1];
 }
 splitFunction();
-var string1 = "Welcome";
+var string1 = "Welcome ";
 
-var string2 = "gamertag";
+var string2 = gamertag;
 
 var username = string1.concat(string2);
-
-
-
-function buttonOnClick() {
-  // alert("Booooommmmmm!!!");
-  console.log("Button Pressed");
-}
+var score = 0;
 function drawHealthbar() {
   var width = 100;
   var height = 20;
@@ -216,20 +211,17 @@ function moveRight()
 function moveLeft()
 {	
 	gamerInput = new GamerInput ("Left");
-	score = score +1;	
 	audio.play();
 }
 function moveUp()
 {
 	gamerInput = new GamerInput ("Up");
-	score = score +1;	
 	audio.play();
 }
 
 function moveDown()
 {
 	gamerInput = new GamerInput ("Down");
-	score = score +1;	
 	audio.play();
 }
 function ButtonUp()
@@ -359,6 +351,7 @@ function animate() {
 	context.clearRect(0, 0, canvas.width, canvas.height); 
 	
 	
+	
 	context.fillText(username,300,100);
 	context.fillText(score,110,30);
 	
@@ -384,6 +377,7 @@ function animate() {
 
 function gameloop() {
     update();
+
     draw();	
 	animate();
     window.requestAnimationFrame(gameloop);
