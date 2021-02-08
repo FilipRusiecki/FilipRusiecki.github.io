@@ -1,7 +1,93 @@
-// Each time this function is called a GameObject
-// is create based on the arguments
-// In JavaScript you can consider everything an Object
-// including functions
+
+
+function buttonOnClick() {
+  // alert("Booooommmmmm!!!");
+  console.log("Button Pressed");
+  updateScore();
+  
+function onPage() {
+  // Using JSON and Local Storage for
+  // GameState Management
+  var gameObj = {
+    'pawn': 1,
+    'worker': 2,
+    'boss': 3
+  };
+
+  // Game objects as JSON
+  localStorage.setItem('gameObj', JSON.stringify(gameObj));
+
+  // Retrieve Games object as from storage
+  var npcObjects = localStorage.getItem('gameObj');
+
+  console.log('npcObjects: ', JSON.parse(npcObjects));
+
+  // Reading Level Information from a file
+  var readJSONFromURL = function (url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+
+    xhr.onload = function () {
+      var status = xhr.status;
+      if (status == 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status);
+      }
+    };
+
+    xhr.send();
+  };
+
+  readJSONFromURL('./data/level.json', function (err, data) {
+    if (err != null) {
+      console.error(err);
+    } else {
+      var text = data["Pawns"];
+      console.log(text);
+      var text = data["Grunts"];
+      console.log(text);
+      var text = data["Boss"];
+      console.log(text);
+    }
+  });
+
+  // Reading File from a Server
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      var data = JSON.parse(this.responseText);
+      document.getElementById("NPC").innerHTML = data[0];
+    }
+  };
+  xmlhttp.open("GET", "./data/level.json", true);
+  xmlhttp.send();
+
+
+
+  updateScore();
+
+}
+
+// Update the player score
+function updateScore() {
+  var current_score = localStorage.getItem('score');
+	console.log("big pp");
+  if (isNaN(current_score)) {
+    localStorage.setItem('score', 0);
+    document.getElementById("SCORE").innerHTML = " [ " + current_score + " ] ";
+  } else {
+    localStorage.setItem('score', parseInt(current_score) + 1);
+    document.getElementById("SCORE").innerHTML = " [ " + current_score + " ] ";
+  }
+
+}
+}
+
+
+
 
 var canvas = document.getElementById("game");
 var context = canvas.getContext("2d");
@@ -120,31 +206,30 @@ function input(event) {
     // console.log("Gamer Input :" + gamerInput.action);
 }
 
-document.getElementById("wButton").onmouseup = function() {buttonUp()};
-document.getElementById("aButton").onmouseup = function() {buttonUp()};
-document.getElementById("dButton").onmouseup = function() {buttonUp()};
-document.getElementById("sButton").onmouseop = function() {buttonUp()}
-
 
 function moveRight()
 {
 	gamerInput = new GamerInput ("Right");
+	score = score +1;
 	audio.play();
 }
 function moveLeft()
 {	
 	gamerInput = new GamerInput ("Left");
+	score = score +1;	
 	audio.play();
 }
 function moveUp()
 {
 	gamerInput = new GamerInput ("Up");
+	score = score +1;	
 	audio.play();
 }
 
 function moveDown()
 {
 	gamerInput = new GamerInput ("Down");
+	score = score +1;	
 	audio.play();
 }
 function ButtonUp()
@@ -272,7 +357,11 @@ var current; // current time
 
 function animate() {
 	context.clearRect(0, 0, canvas.width, canvas.height); 
-	context.fillText(username,600,200);
+	
+	
+	context.fillText(username,300,100);
+	context.fillText(score,110,30);
+	
     current = new Date().getTime(); // update current
     if (current - initial >= 300) { // check is greater that 500 ms
         currentFrame = (currentFrame + 1) % frames; // update frame
