@@ -5,13 +5,12 @@ function buttonOnClick() {
   console.log("Button Pressed");
   updateScore();
   
-function onPage() {
+// function onPage() {
   // Using JSON and Local Storage for
   // GameState Management
   var gameObj = {
-    'pawn': 1,
-    'worker': 2,
-    'boss': 3
+    'w': 1,
+
   };
 
   // Game objects as JSON
@@ -24,6 +23,7 @@ function onPage() {
 
   // Reading Level Information from a file
   var readJSONFromURL = function (url, callback) {
+
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'json';
@@ -40,16 +40,13 @@ function onPage() {
     xhr.send();
   };
 
-  readJSONFromURL('https://filiprusiecki.github.io./data/level.json', function (err, data) {
+  readJSONFromURL('https://filiprusiecki.github.io./data/data.json', function (err, data) {
     if (err != null) {
       console.error(err);
     } else {
-      var text = data["Pawns"];
+      var text = data["w"];
       console.log(text);
-      var text = data["Grunts"];
-      console.log(text);
-      var text = data["Boss"];
-      console.log(text);
+  
     }
   });
 
@@ -62,20 +59,21 @@ function onPage() {
       document.getElementById("NPC").innerHTML = data[0];
     }
   };
-  xmlhttp.open("GET", "https://filiprusiecki.github.io./data/level.json", true);
+  xmlhttp.open("GET", "https://filiprusiecki.github.io./data/data.json", true);
   xmlhttp.send();
-
-
 
   updateScore();
 
-}
+// }
 
 // Update the player score
 function updateScore() {
+	
+	
   var current_score = localStorage.getItem('score');
+  console.log(current_score);
   if (isNaN(current_score)) {
-    localStorage.setItem('score', 0);
+    localStorage.setItem('score', score);
     document.getElementById("SCORE").innerHTML = " [ " + current_score + " ] ";
   } else {
     localStorage.setItem('score', parseInt(current_score) + 1);
@@ -84,7 +82,7 @@ function updateScore() {
 
 }
 }
-
+var score = 0;
 
 
 
@@ -105,8 +103,7 @@ context.font = "30px Arial";
 var url = document.location.href;
 var gamertag;
 function splitFunction() {
-	var result = url.split("=");
-	
+	var result = url.split("=");	
 	gamertag = result[1];
 }
 splitFunction();
@@ -115,7 +112,7 @@ var string1 = "Welcome ";
 var string2 = gamertag;
 
 var username = string1.concat(string2);
-var score = 0;
+
 function drawHealthbar() {
   var width = 100;
   var height = 20;
@@ -199,10 +196,7 @@ function input(event) {
     }
     // console.log("Gamer Input :" + gamerInput.action);
 }
-document.getElementById("wButton").onmouseup = function() {buttonUp()};
-document.getElementById("aButton").onmouseup = function() {buttonUp()};
-document.getElementById("dButton").onmouseup = function() {buttonUp()};
-document.getElementById("sButton").onmouseop = function() {buttonUp()}
+
 
 
 
@@ -210,19 +204,27 @@ function moveRight()
 {
 	gamerInput = new GamerInput ("Right");
 	score = score +1;
+	buttonOnClick()
 	audio.play();
+
+
 }
 function moveLeft()
 {	
 	gamerInput = new GamerInput ("Left");
 	score = score +1;
+	buttonOnClick()
 	audio.play();
+
+
 }
 function moveUp()
 {
 	gamerInput = new GamerInput ("Up");
 	score = score +1;
 	audio.play();
+	buttonOnClick()
+
 }
 
 function moveDown()
@@ -230,6 +232,8 @@ function moveDown()
 	gamerInput = new GamerInput ("Down");
 	score = score +1;
 	audio.play();
+	buttonOnClick()
+	
 }
 function ButtonUp()
 {
