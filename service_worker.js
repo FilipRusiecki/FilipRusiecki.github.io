@@ -1,8 +1,9 @@
-var cacheName = 'muddygames-pwa';
+var cacheName = 'Kayu-pwa';
 var filesToCache = [
   '/',
-  '/index.html',
+  '/gameloop.html',
   '/css/push.css',
+  '/css/fonts/cosmicblaster.ttf',
   '/js/script.js'
 ];
 
