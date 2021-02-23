@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      background: radial-gradient(ellipse at center, #fff4fc 65%, #ffe8fd 100%);
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      padding: 10%;
+      box-sizing: border-box;
+      background: url('http://wemakeawesomesh.it/nyancat/nyan.gif') space space center/20%;
+    }
+
+    section {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    h1 {
+      font-family: "Infamy Fill";
+      font-size: 49vw;
+      margin: 0;
+      top: 40%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      position: absolute;
+      color: #f091ad;
+      text-transform: uppercase;
+      -webkit-font-variant-ligatures: none;
+      font-variant-ligatures: none;
+      line-height: 1;
+    }
+
+    h1:before, h1:after {
+      content: attr(data-heading);
+      position: absolute;
+      left: 0;
+      -webkit-font-variant-ligatures: none;
+      font-variant-ligatures: none;
+      line-height: 0.97;
+      font-weight: normal;
+    }
+
+    h1:before {
+      color: #f7cad8;
+      width: 100%;
+      z-index: 5;
+      font-family: "Infamy Outline";
+    }
+
+    h1:after {
+      color: rgba(191, 73, 112, 0.3);
+      width: 100%;
+      font-family: "Infamy Shadow";
+      line-height: 1.1;
+    }
+
+    #mfPreviewBar {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<section>
+  <h1 data-heading="nyan" contenteditable>nyan</h1>
+</section>
+<script type="application/javascript">
+
+  // JS is to make the text editable fot demo purpose, not required for the effect. Thanks for the suggestion @chriscoyier!
+  var h1 = document.querySelector("h1");
+
+  h1.addEventListener("input", function() {
+    this.setAttribute("data-heading", this.innerText);
+  });
+
+  // THIS JS IS JUST FOR LOADING MY FONTS TRIAL FONTS IN, IT IS NOT NEEDED FOR THE ACTUAL EFFECT IF YOU HAVE THE FONTS.
+
+  (function() {
+    var path = '//easy.myfonts.net/v2/js?sid=265311(font-family=Infamy+Fill)&sid=265312(font-family=Infamy+Highlight)&sid=265313(font-family=Infamy+Shadow)&sid=265314(font-family=Infamy+Outline)&key=ArVWnapeog',
+      protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+      trial = document.createElement('script');
+    trial.type = 'text/javascript';
+    trial.async = true;
+    trial.src = protocol + path;
+    var head = document.getElementsByTagName("head")[0];
+    head.appendChild(trial);
+  })();
+</script>
+</body>
+</html>
