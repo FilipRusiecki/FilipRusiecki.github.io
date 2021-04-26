@@ -7,6 +7,23 @@ body {
 	overflow-y: hidden;
 	font-family: cosmicblaster;
 }
+@media only screen and (max-width: 780px)
+{
+	canvas#myCanvas
+{
+	
+    position: absolute;
+    top:100px;
+    left:23%;
+    width: 50vw;
+    height: 50vh;
+    object-fit: contain;
+}	
+
+}
+
+
+
 
 @font-face {
   font-family: cosmicblaster;
@@ -18,6 +35,11 @@ canvas{
 	position:absolute;
 	top:100px;
 	left:23%;
+	max-width: 1000px;
+	max-height: 600px;
+	width: 75vw;
+	height:	75vh;
+	object-fit: contain;
 	
 }
 img{
