@@ -88,7 +88,7 @@ var callTheWalkBack = false;
 var allowToAttack = true;
 var gameWon = false;
 var gameLost = false;
-
+var pressSpace = false;
 
 function drawHealthbar() {
   var width = 100;
@@ -339,6 +339,19 @@ var loseSprite = new Image();
 loseSprite.src = "./img/lose.png"
 
 
+var spaceSprite = new Image();
+spaceSprite.src = "./img/space.png"
+
+var audioSprite = new Image();
+audioSprite.src = "./img/audio.png"
+
+
+
+
+
+
+
+
 var x = 0,
     y = 1300;
 
@@ -364,11 +377,16 @@ var currentBg; // current time
 var currentnpc; // current time
 
 
-
-
-
-
-
+document.onkeydown = function(evt)
+{
+		
+     evt = evt || window.event;
+     if(evt.keyCode == 32)
+	{  
+		pressSpace = true;
+		allowToAttack = true;
+    }
+}
 // Update to be added
 function update() {
     console.log("Update ...");
@@ -384,10 +402,8 @@ function update() {
 	}
 	playerLoose();
 	playerWin();
-	
-	
-}
 
+}
 
 function draw() {
     console.log("Draw  ...");
@@ -444,6 +460,17 @@ function animate() {
 		context.drawImage(loseSprite,400,100);
 		allowToAttack = false;
 	}
+	
+	if (pressSpace === false)
+	{
+		
+		context.drawImage(spaceSprite,350,200);
+		context.drawImage(audioSprite,10,100);
+		allowToAttack = false;
+	}
+	
+	
+	
 	
 	
 	animatenpc();
