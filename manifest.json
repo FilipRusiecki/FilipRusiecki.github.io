@@ -40,4 +40,6 @@
  ],
 
     "orientation": "landscape"
+	"background_color": "Magenta"
+	"theme_color" : "Black"
 }
