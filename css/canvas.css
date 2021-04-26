@@ -157,11 +157,11 @@ img{
 
 
 @keyframes example {
-  0%   {background-color:red; left:470px; top:540px;}
-  25%  {background-color:yellow; left:1050px; top:540px;}
-  50%  {background-color:blue; left:1050px; top:750px;}
-  75%  {background-color:green; left:470px; top:750px;}
-  100% {background-color:red; left:470px; top:540px;}
+  0%   {background-color:red; left:0px; top:530px;}
+  25%  {background-color:yellow; left:120px; top:530px;}
+  50%  {background-color:blue; left:120px; top:730px;}
+  75%  {background-color:green; left:5px; top:730px;}
+  100% {background-color:red; left:0px; top:530px;}
 }
 
 

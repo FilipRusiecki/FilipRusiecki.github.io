@@ -86,7 +86,8 @@ var goingFoward = 1;
 var callTheWalk	= false;
 var callTheWalkBack = false;
 var allowToAttack = true;
-
+var gameWon = false;
+var gameLost = false;
 
 
 function drawHealthbar() {
@@ -264,6 +265,7 @@ function playerLoose(){
 	if(playerHealth <= 0)
 	{
 		console.log("player is dead");
+		gameLost = true;
 	}
 
 	
@@ -274,6 +276,7 @@ function playerWin(){
 	if(npcHealth <= 0)
 	{
 		console.log("npc is dead");
+		gameWon = true;
 	}
 }
 
@@ -327,6 +330,13 @@ sprite.src = "./img/sprite.png";
 // Sprite
 var spritenpc = new Image();
 spritenpc.src = "./img/spriteflipped.png"; 
+
+var winSprite = new Image();
+winSprite.src = "./img/win.png"
+
+
+var loseSprite = new Image();
+loseSprite.src = "./img/lose.png"
 
 
 var x = 0,
@@ -423,7 +433,18 @@ function animate() {
     context.drawImage(sprite, (sprite.width / 12) * currentFrame, 0, 100, 256, newX, newY, 105, 256);
 	drawHealthbar();
 	drawHealthbarNpc();
-
+	if(gameWon === true)
+	{
+		context.drawImage(winSprite,400,100);
+		allowToAttack = false;
+	}
+	
+	if(gameLost === true)
+	{
+		context.drawImage(loseSprite,400,100);
+		allowToAttack = false;
+	}
+	
 	
 	animatenpc();
 	
