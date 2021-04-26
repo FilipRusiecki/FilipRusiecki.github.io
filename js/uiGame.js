@@ -5,29 +5,79 @@ var context = canvas.getContext("2d");
 
 
 
+var cyberpunk = new Audio('cyber.mp3');
+var love = new Audio('love.mp3');
+var tripaloski = new Audio('tri.mp3');
+
+
 
 var options = [{
     "text": "Select Song",
+	"value": "No Audio",
     "selected": true
   },
   {
     "text": "Song1",
+	"value": "cyber.mp3"
   },
   {
     "text": "Song2",
+	"value": "love.mp3"
   },
   {
     "text": "Song3",
+	"value": "tri.mp3"
   }
 ];
 
-var selectBox = document.getElementById('equipment');
+var selectBox = document.getElementById('music');
 
 for (var i = 0; i < options.length; i++) {
   var option = options[i];
   selectBox.options.add(new Option(option.text, option.value, option.selected));
 }
 
+
+
+
+function musicSelect() {
+  var selection = document.getElementById("music").value;
+  var active = document.getElementById("active");
+  if (active.checked == true) 
+  {
+    document.getElementById("HUD").innerHTML = selection + " active ";
+    console.log("Audio Active");
+    if(selection === "cyber.mp3")
+    {
+        cyberpunk.play();
+    }
+    if(selection === "love.mp3")
+    {
+        love.play();
+    }
+    if(selection === "tri.mp3")
+    {
+        tripaloski.play();
+    }
+    
+  } 
+  
+  else 
+  {
+    document.getElementById("HUD").innerHTML = selection + " selected ";
+    console.log("audio Selected");
+    
+    cyberpunk.pause();
+    cyberpunk.currentTime = 0;
+    
+    love.pause();
+    love.currentTime = 0;
+    
+    tripaloski.pause();
+    tripaloski.currentTime = 0;
+    
+  }
+}
 var playerHealth = 100;
 var npcHealth = 100;
 var countFrom = 0;

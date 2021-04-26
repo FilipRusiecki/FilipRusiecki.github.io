@@ -81,7 +81,7 @@
       <tr>
         <td colspan="3" align="center">
           <div class="custom-select" style="width:200px;">
-            <select id="equipment" onchange="weaponSelection()">
+            <select id="music" onchange="musicSelect()">
             </select>
           </div>
         </td>
@@ -90,14 +90,29 @@
         <td colspan="3" align="center">
           <label class="switch">
 			Audio ON/OFF
-            <input id="active" onclick="weaponSelection()" type="checkbox">
+            <input id="active" onclick="musicSelect()" type="checkbox">
             <span class="toggle"></span>
-			 <h1 id="HUD" onload="weaponSelection()"></h1>
+			 <h1 id="HUD" onload="musicSelect()"></h1>
           </label>
         </td>
       </tr>
     </tbody>
   </table>
+  
+		<audio>
+            audio src="cyber.mp3" id="cyberpunk">
+        </audio>
+
+        <audio>
+            audio src="love.mp3" id="love">
+        </audio>
+
+        <audio>
+            audio src="tri.mp3" id="tripalos">
+        </audio>
+
+  
+  
   <div class ="rainbowSquare">
   
   </div>
