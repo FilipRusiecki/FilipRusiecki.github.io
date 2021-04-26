@@ -1,0 +1,177 @@
+@charset "utf-8";
+body {
+	height: 1100px;
+	background-color: red; /* For browsers that do not support gradients */
+	background-image: radial-gradient( red 5%, blue 15%, purple 60%);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	font-family: cosmicblaster;
+}
+
+@font-face {
+  font-family: cosmicblaster;
+  src: url(./fonts/cosmicblaster.ttf);
+}
+
+
+canvas{
+	position:absolute;
+	top:100px;
+	left:23%;
+	
+}
+img{
+    width: 100%;
+}
+
+.button {
+  background-color: #purple; 
+  font-family: cosmicblaster;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+
+
+#wButton{
+	font-family: cosmicblaster;
+	position:absolute;
+	top:720px;
+	left:500px;
+	width:250px;
+	height:70px;
+	background-color: #815194; 
+	color: black; 
+	border: 2px solid #815194;
+	border-radius: 10px;
+}
+#wButton:hover{
+	background-color: #8517b0;
+	color: #a943d1;
+}
+
+#wButton:active {
+    box-shadow: 0 5px #3D3D3D;
+    transform: translateY(7px);
+}
+
+
+
+
+
+
+
+
+
+
+
+#aButton{
+	position:absolute;
+	top:720px;
+	left:800px;
+	width:250px;
+	height:70px;
+	background-color: #815194; 
+	color: black; 
+	border: 2px solid #815194;
+	border-radius: 10px;
+}
+#aButton:hover{
+	background-color: #8517b0;
+	color: #a943d1;
+}
+
+#aButton:active {
+    box-shadow: 0 5px #3D3D3D;
+    transform: translateY(7px);
+}
+
+
+
+
+
+
+
+
+
+
+#dButton{
+	position:absolute;
+	top:820px;
+	left:500px;
+	width:250px;
+	height:70px;
+	background-color: #815194; 
+	color: black; 
+	border: 2px solid #815194;
+	border-radius: 10px;
+}
+#dButton:hover{
+	background-color: #8517b0;
+	color: #a943d1;
+}
+
+#dButton:active {
+    box-shadow: 0 5px #3D3D3D;
+    transform: translateY(7px);
+}
+ .rainbowSquare{
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+
+@keyframes example {
+  0%   {background-color:red; left:470px; top:540px;}
+  25%  {background-color:yellow; left:1050px; top:540px;}
+  50%  {background-color:blue; left:1050px; top:750px;}
+  75%  {background-color:green; left:470px; top:750px;}
+  100% {background-color:red; left:470px; top:540px;}
+}
+
+
+
+#sButton{
+	position:absolute;
+	top:820px;
+	left:800px;
+	width:250px;
+	height:70px;
+	background-color: #815194; 
+	color: black; 
+	border: 2px solid #815194;
+	border-radius: 10px;
+}
+#sButton:hover{
+	background-color: #8517b0;
+	color: #a943d1;
+}
+
+#sButton:active {
+    box-shadow: 0 5px #3D3D3D;
+    transform: translateY(7px);
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,10 +1,10 @@
 var cacheName = 'Kayu-pwa';
 var filesToCache = [
   '/',
-  '/gameloop.html',
-  '/css/push.css',
+  '/uiGame.html',
+  '/css/canvas.css',
   '/css/fonts/cosmicblaster.ttf',
-  '/js/script.js'
+  '/js/uiGame.js'
 ];
 
 /* Cache contents when Offline See Cache */

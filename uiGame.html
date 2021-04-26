@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>UI GAME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GAME FOR UI">
+    <meta name="author" content="FILIP RUSIECKI">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="./css/canvas.css">
+
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000" height="600" style="border: black 1px solid;">
+    </canvas>
+	
+	
+	<table>
+        <tbody>
+            <tr>
+                <td>&nbsp;</td>
+                <td><button onclick="lightAttack()" class="button" id="wButton"><span>light attack</span></button></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><button onclick="heavyAttack()" class="button" id="aButton">Heavy Attack</button></td>
+                <td>&nbsp;</td>
+                <td><button onclick="playerBarrier()" class="button" id="dButton">Barrier</button></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><button onclick="playerBuff()" class="button" id="sButton">Buffs</button></td>
+                <td>&nbsp;</td>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">
+          <div class="custom-select" style="width:200px;">
+            <select id="equipment" onchange="weaponSelection()">
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">
+          <label class="switch">
+			Audio ON/OFF
+            <input id="active" onclick="weaponSelection()" type="checkbox">
+            <span class="toggle"></span>
+			 <h1 id="HUD" onload="weaponSelection()"></h1>
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class ="rainbowSquare">
+  
+  </div>
+  
+  
+
+</body>
+
+    <!--JavaScript File-->
+    <script src="./js/uiGame.js"></script>
+
+</html>
