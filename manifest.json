@@ -41,10 +41,11 @@
    "src": "img/android-icon-512x512.png",
    "sizes": "512x512",
    "type": "image\/png",
-   "density": "5.0"
+   "purpose": "any maskable"
   }
  ],
-
+	"scope": "/",
+	"display": "minimal-ui",
     "orientation": "landscape"
 	"background_color": "Magenta"
 	"theme-color": "Black"
