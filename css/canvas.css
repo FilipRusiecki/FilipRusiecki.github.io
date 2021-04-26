@@ -50,10 +50,10 @@ img{
   background-color: #purple; 
   font-family: cosmicblaster;
   color: white;
-  padding: 16px 12px;
+  padding: 16px 5px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
+  font-size: 10px;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -67,7 +67,7 @@ img{
 	position:absolute;
 	top:720px;
 	left:10px;
-	width:100px;
+	width:50px;
 	height:70px;
 	background-color: #815194; 
 	color: black; 
@@ -97,8 +97,8 @@ img{
 #aButton{
 	position:absolute;
 	top:720px;
-	left:150px;
-	width:100px;
+	left:70px;
+	width:50px;
 	height:70px;
 	background-color: #815194; 
 	color: black; 
@@ -128,7 +128,7 @@ img{
 	position:absolute;
 	top:820px;
 	left:10px;
-	width:100px;
+	width:50px;
 	height:70px;
 	background-color: #815194; 
 	color: black; 
@@ -169,8 +169,8 @@ img{
 #sButton{
 	position:absolute;
 	top:820px;
-	left:150px;
-	width:100px;
+	left:70px;
+	width:50px;
 	height:70px;
 	background-color: #815194; 
 	color: black; 
