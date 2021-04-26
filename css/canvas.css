@@ -28,7 +28,7 @@ img{
   background-color: #purple; 
   font-family: cosmicblaster;
   color: white;
-  padding: 16px 32px;
+  padding: 16px 12px;
   text-align: center;
   display: inline-block;
   font-size: 16px;
@@ -44,8 +44,8 @@ img{
 	font-family: cosmicblaster;
 	position:absolute;
 	top:720px;
-	left:500px;
-	width:250px;
+	left:10px;
+	width:100px;
 	height:70px;
 	background-color: #815194; 
 	color: black; 
@@ -75,8 +75,8 @@ img{
 #aButton{
 	position:absolute;
 	top:720px;
-	left:800px;
-	width:250px;
+	left:150px;
+	width:100px;
 	height:70px;
 	background-color: #815194; 
 	color: black; 
@@ -105,8 +105,8 @@ img{
 #dButton{
 	position:absolute;
 	top:820px;
-	left:500px;
-	width:250px;
+	left:10px;
+	width:100px;
 	height:70px;
 	background-color: #815194; 
 	color: black; 
@@ -147,8 +147,8 @@ img{
 #sButton{
 	position:absolute;
 	top:820px;
-	left:800px;
-	width:250px;
+	left:150px;
+	width:100px;
 	height:70px;
 	background-color: #815194; 
 	color: black; 
