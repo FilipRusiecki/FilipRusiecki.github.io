@@ -41,5 +41,5 @@
 
     "orientation": "landscape"
 	"background_color": "Magenta"
-	"start_url": "https://filiprusiecki.github.io/uiGame.html"
+	"theme_color" : "Black"
 }
