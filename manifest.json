@@ -49,5 +49,5 @@
     "orientation": "landscape"
 	"background_color": "Magenta"
 	"theme-color": "Black"
-	"start-url": "/uiGame.html"
+	"start-url": "./uiGame.html"
 }
