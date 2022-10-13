@@ -4,7 +4,28 @@ body {
 	overflow-x: hidden;
 }
 
+.navFloat{
+	float: right;
+	border-left:1px solid #bbb;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	
+	}
 
+.navFloat:last-child{
+	border-left: none;
+}
+
+.navBar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fcfcfc;
+}
 
 
 /* Define a custom web font */
