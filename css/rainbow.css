@@ -1,18 +1,16 @@
 @charset "utf-8";
 body {
-	background-color: #000000;
+	background-color: #e3e3e3;
 	overflow-x: hidden;
 }
 
 .navFloat{
 	float: right;
-	border-left:1px solid #bbb;
 	display: block;
-	color: black;
+	color: white;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	
 	}
 
 .navFloat:last-child{
@@ -25,6 +23,7 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: #fcfcfc;
+  text-decoration: none;
 }
 
 
